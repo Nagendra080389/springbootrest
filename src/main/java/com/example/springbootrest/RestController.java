@@ -41,7 +41,7 @@ ObjectMapper mapper = new ObjectMapper();
             fileAttachmentMerged.setStrUploadedDate(new Date().toString());
             fileAttachmentMergeds.add(fileAttachmentMerged);
         }
-String jsonInString2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(staff);
+String jsonInString2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(fileAttachmentMergeds);
 
         return jsonInString2;
 
