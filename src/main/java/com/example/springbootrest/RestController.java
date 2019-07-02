@@ -20,7 +20,7 @@ import java.util.List;
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 
-    @CrossOrigin(origins = {"https://nagesingh-dev-ed--c.visualforce.com", "chrome-extension://aejoelaoggembcahagimdiliamlcdmfm"})
+    @CrossOrigin(origins = {"https://nagesingh-dev-ed--c.visualforce.com", "chrome-extension://aejoelaoggembcahagimdiliamlcdmfm","https://hcscace--acedev--c.cs90.visual.force.com"})
     @RequestMapping(value = "/consumeFiles", method = RequestMethod.POST)
     public String consumeRest(@RequestParam("filename")MultipartFile filename[]) throws IOException {	    
         //create a temp file	
