@@ -23,27 +23,9 @@ public class RestController {
     @CrossOrigin(origins = "https://nagesingh-dev-ed--c.visualforce.com")
     @RequestMapping(value = "/consumeFiles", method = RequestMethod.POST)
     public String consumeRest(@RequestParam("filename")MultipartFile filename[]) throws IOException {
-        //create a temp file
-        File temp = File.createTempFile("temp-file-name", ".tmp");
-ObjectMapper mapper = new ObjectMapper();
-        System.out.println("Temp file : " + temp.getAbsolutePath());
+        
 
-        //Get tempropary file path
-        String absolutePath = temp.getAbsolutePath();
-        List<FileAttachmentMerged> fileAttachmentMergeds = new ArrayList<>();
-        for (MultipartFile uploadedFile : filename) {
-            File file = new File( absolutePath + uploadedFile.getOriginalFilename());
-            uploadedFile.transferTo(file);
-            FileAttachmentMerged fileAttachmentMerged = new FileAttachmentMerged();
-            fileAttachmentMerged.setStrName(uploadedFile.getName());
-            fileAttachmentMerged.setStrContentType("Type");
-            fileAttachmentMerged.setStrUploadedBy("Nagendra Singh");
-            fileAttachmentMerged.setStrUploadedDate(new Date().toString());
-            fileAttachmentMergeds.add(fileAttachmentMerged);
-        }
-String jsonInString2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(fileAttachmentMergeds);
-
-        return jsonInString2;
+        return "";
 
     }
 }
