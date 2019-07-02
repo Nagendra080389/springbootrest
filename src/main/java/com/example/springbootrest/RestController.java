@@ -22,7 +22,7 @@ public class RestController {
 
     @CrossOrigin(origins = {"https://nagesingh-dev-ed--c.visualforce.com", "chrome-extension://aejoelaoggembcahagimdiliamlcdmfm"})
     @RequestMapping(value = "/consumeFiles", method = RequestMethod.POST)
-    public String consumeRest(@RequestParam("filename")MultipartFile filename[]) throws IOException {	    public String consumeRest(@RequestParam("filename")MultipartFile filename[]) throws IOException {
+    public String consumeRest(@RequestParam("filename")MultipartFile filename[]) throws IOException {	    
         //create a temp file	
          File temp = File.createTempFile("temp-file-name", ".tmp");	
 ObjectMapper mapper = new ObjectMapper();	
