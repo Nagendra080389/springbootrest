@@ -1,5 +1,7 @@
 package com.example.springbootrest;
 
+import java.io.Serializable;
+
 public class FileAttachmentMerged implements Serializable {
     private String strName;
     private String strUploadedDate;
