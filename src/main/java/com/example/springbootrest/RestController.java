@@ -19,7 +19,7 @@ import java.util.List;
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 
-    @CrossOrigin(origins = "https://nagesingh-dev-ed--c.visualforce.com")
+    @CrossOrigin(origins = {"https://nagesingh-dev-ed--c.visualforce.com", "chrome-extension://aejoelaoggembcahagimdiliamlcdmfm","https://hcscace--acedev--c.cs90.visual.force.com"})
     @RequestMapping(value = "/consumeFiles", method = RequestMethod.POST)
     public List<FileAttachmentMerged> consumeRest(@RequestParam(value = "metadata", required = true)String jsonData ,
                                                   @RequestParam(value = "filename", required = true)MultipartFile filename) throws IOException {
